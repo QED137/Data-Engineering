@@ -71,5 +71,7 @@ flight_api_key = your_flight_api_key
 ```
 ### **Run the following command**
 ```bash
+pip install -r requirements.txt
+
 python3 main.py
 ``
