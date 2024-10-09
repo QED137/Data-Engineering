@@ -69,7 +69,22 @@ port = 3306
 weather_api_key = your_openweather_api_key
 flight_api_key = your_flight_api_key
 ```
-### **Run the following command**
+### **Required Libraries**
+Run 
 ```bash
+cd your_repository_name
 pip install -r requirements.txt
+```
+### **Run the Project**
+To run the project and obtain the desired results, execute the main.py file. This file is designed to handle three core operations:
+- **Fetch Data**: Retrieves weather and flight data from the respective APIs.
+- **Write to Database**: Stores the fetched data in the relevant tables within the MySQL database.
+- **Retrieve Data**: Queries and retrieves data from the database for further analysis or display.
+You can modify the main.py file to customize the data fetching process, database interactions, and retrieval logic based on your needs.
+To run the project, use the following command:
+```bash
 python3 main.py
+```
+Make sure that
+- Your **API** keys are correctly configured in the **config.ini** file.
+- The **MySQL** database is set up and accessible.
