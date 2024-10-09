@@ -1,0 +1,31 @@
+# Ignore environment files
+.env
+config/config.ini
+
+# Byte-compiled Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environment folder
+venv/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MySQL data storage
+db_data/
+
+# Ignore Docker-related files
+docker-compose.override.yml
+*.log
+
+# Ignore compiled SQLAlchemy migration files
+migrations/
+
+# macOS-specific files
+.DS_Store
+
+# IDE-specific files (Optional, based on the IDE you're using)
+.vscode/
+.idea/
