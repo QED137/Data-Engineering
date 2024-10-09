@@ -1,35 +1,11 @@
-# Data-Engineering
-Basics of Data Engineering.  Fetching data from several apis, writing to the database and retrieving from database
+# **Data-Engineering: Weather and Flight Data Project**
 
-# How to run this porject in your own sytem
-
-# **Weather and Flight Data Project**
-
+This project is part of the training at **WBS Coding School**. The goal of this project is to develop a data engineering pipeline that fetches **weather data** and **flight information** using external APIs, stores the data in a **MySQL database**, and provides functionality for **retrieving** and **analyzing** the data.
 This project fetches **weather data** and **flight information**, stores them in a **MySQL database**, and provides functionality for retrieving and analyzing the data. The application integrates two APIs: **OpenWeather API** for weather data and **AeroDataBox API** for flight information.
 
-## **Table of Contents**
-
-- [Data-Engineering](#data-engineering)
-- [How to run this porject in your own sytem](#how-to-run-this-porject-in-your-own-sytem)
-- [**Weather and Flight Data Project**](#weather-and-flight-data-project)
-  - [**Table of Contents**](#table-of-contents)
-  - [**Project Overview**](#project-overview)
-  - [**Features**](#features)
-  - [**Technologies Used**](#technologies-used)
-  - [**Setup Instructions**](#setup-instructions)
-    - [**1. Prerequisites**](#1-prerequisites)
-    - [**2. Clone the Repository**](#2-clone-the-repository)
-
----
-
-## **Project Overview**
-
-This project automates the collection of weather and flight data for a list of cities, stores the data in a MySQL database, and provides capabilities to retrieve and analyze this information. The project leverages two APIs to gather real-time information:
-
-1. **OpenWeather API**: Fetches weather forecasts, including temperature, humidity, wind speed, and outlook.
-2. **AeroDataBox API**: Retrieves flight arrival data, including flight numbers, scheduled arrival times, and departure airport details.
-
-The application interacts with these APIs, processes the data, and stores it in a MySQL database for easy querying and analysis.
+The project integrates two main APIs:
+- **OpenWeather API**: Retrieves weather forecast data, including temperature, humidity, wind speed, and overall outlook for specific cities.
+- **AeroDataBox API**: Fetches flight arrival data, including flight numbers, scheduled arrival times, and departure airport detail
 
 ## **Features**
 
@@ -68,3 +44,32 @@ git clone https://github.com/your_username/your_repository_name.git
 cd your_repository_name
 
 ```
+### **3. Setup a database in your mysqlworkbench**
+
+- create database and uplaod  weatherDB.sql file to your mysqlworkbench
+### **Get your API key**
+- **OpenWeather API**: Create your API key for weather data [here](https://openweathermap.org/api).
+- **AeroDataBox API**: Create your API key for flight data [here](https://aerodatabox.p.rapidapi.com).
+
+### **4. Create `config.ini`**
+
+The instructions for creating the `config.ini` file are provided in the `config` folder's `README.md` file. This file is essential because it contains the necessary information for your local database and API keys.
+
+Your `config.ini` file should look like this:
+
+```ini
+[Database]
+user = your_mysql_username
+password = your_mysql_password
+host = localhost
+database = weatherDB
+port = 3306
+
+[API]
+weather_api_key = your_openweather_api_key
+flight_api_key = your_flight_api_key
+```
+### **Run the following command**
+```bash
+python3 main.py
+``
