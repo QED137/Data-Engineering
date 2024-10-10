@@ -1,0 +1,26 @@
+2024-10-10 12:13:45,875 - Retrieved city data: 
+   city_id     city   country  latitude  longitude
+0        1   Berlin   Germany   52.5200   13.40500
+1        2  Hamburg   Germany   53.5500   10.00000
+2        3   Munich   Germany   48.1375   11.57500
+3        4    Delhi     India   28.6100   77.23000
+4        5    Paris    France   48.8567    2.35222
+5        6     Lyon    France   45.7667    4.83333
+2024-10-10 12:13:47,284 - Weather data fetched: 
+     city_id       forecast_time  ... rain_prob   data_retrieved_at
+0          1 2024-10-10 12:00:00  ...      0.20 2024-10-10 12:13:46
+1          1 2024-10-10 15:00:00  ...      0.97 2024-10-10 12:13:46
+2          1 2024-10-10 18:00:00  ...      0.21 2024-10-10 12:13:46
+3          1 2024-10-10 21:00:00  ...      0.00 2024-10-10 12:13:46
+4          1 2024-10-11 00:00:00  ...      0.00 2024-10-10 12:13:46
+..       ...                 ...  ...       ...                 ...
+235        6 2024-10-14 21:00:00  ...      0.20 2024-10-10 12:13:47
+236        6 2024-10-15 00:00:00  ...      0.00 2024-10-10 12:13:47
+237        6 2024-10-15 03:00:00  ...      0.00 2024-10-10 12:13:47
+238        6 2024-10-15 06:00:00  ...      0.00 2024-10-10 12:13:47
+239        6 2024-10-15 09:00:00  ...      0.00 2024-10-10 12:13:47
+
+[240 rows x 8 columns]
+2024-10-10 12:13:47,366 - Weather data pushed to the database.
+2024-10-10 12:13:47,421 - Desktop notification sent: Weather Data Update - Weather data has been successfully pushed to the database.
+2024-10-10 12:13:48,201 - Failed to send email: (534, b'5.7.9 Application-specific password required. For more information, go to\n5.7.9  https://support.google.com/mail/?p=InvalidSecondFactor ffacd0b85a97d-37d4b6bcf50sm1120239f8f.29 - gsmtp')
