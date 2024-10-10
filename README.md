@@ -40,7 +40,7 @@ Before you begin, ensure you have the following software installed on your local
 Clone this repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your_username/your_repository_name.git
+git clone https://github.com/QED137/Data-Engineering
 cd your_repository_name
 
 ```
@@ -68,6 +68,12 @@ port = 3306
 [API]
 weather_api_key = your_openweather_api_key
 flight_api_key = your_flight_api_key
+
+[Email]
+sender_email = your_email@gmail.com
+email_password = your_email_password
+smtp_server = smtp.gmail.com
+smtp_port = 587
 ```
 ### **Required Libraries**
 Run 
@@ -83,8 +89,31 @@ To run the project and obtain the desired results, execute the main.py file. Thi
 You can modify the main.py file to customize the data fetching process, database interactions, and retrieval logic based on your needs.
 To run the project, use the following command:
 ```bash
-python3 main.py
+python3 main.py --weather --flights
 ```
 Make sure that
 - Your **API** keys are correctly configured in the **config.ini** file.
 - The **MySQL** database is set up and accessible.
+### **Automating the task with CRON**
+Create a bash file automation.sh
+```bash
+#!/bin/bash
+
+# Log file location
+LOG_FILE="./automation.log"
+
+# Execute your Python script for weather data
+echo "Fetching weather data..." >> $LOG_FILE
+python3 main.py --weather >> $LOG_FILE 2>&1
+echo "Weather data fetched successfully!" >> $LOG_FILE
+
+# Execute your Python script for flight data
+echo "Fetching flight data..." >> $LOG_FILE
+python3 main.py --flights >> $LOG_FILE 2>&1
+echo "Flight data fetched successfully!" >> $LOG_FILE
+```
+To automate the project, you can use cron jobs to schedule regular data fetching. Here is an example of how to set up a cron job:
+```bash
+# Run the project daily at midnight
+0 0 * * * /path/to/your/project/automation.sh
+
