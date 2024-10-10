@@ -73,7 +73,7 @@ flight_api_key = your_flight_api_key
 sender_email = your_email@gmail.com
 email_password = your_email_password
 smtp_server = smtp.gmail.com
-smtp_port = 587
+smtp_port = your_smtp_port
 ```
 ### **Required Libraries**
 Run 
